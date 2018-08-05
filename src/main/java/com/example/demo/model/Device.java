@@ -9,12 +9,12 @@ import javax.persistence.Id;
 public class Device {
 
 
-    @Column(name = "Vehicle_ID")
-    private String V_id;
-
     @Id
     @Column(name = "Device_ID")
-    private String D_id; // ID type is INTEGER hence JpaRepository<Device, Integer>
+    private String D_id; // ID type is STRING, hence JpaRepository<Device, STRING>
+    
+    @Column(name = "Vehicle_ID")
+    private String V_id;
 
     @Column(name = "Username")
     private String username;
@@ -47,16 +47,16 @@ public class Device {
         return username;
     }
 
-    public void setUsername(String name) {
-        this.username = name;
+    public void setUsername(String u_name) {
+        this.username = u_name;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String passw) {
-        this.password = passw;
+    public void setPassword(String pw) {
+        this.password = pw;
     }
 
 
