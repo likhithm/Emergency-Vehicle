@@ -37,7 +37,7 @@ CREATE TABLE `blacklist` (
 
 LOCK TABLES `blacklist` WRITE;
 /*!40000 ALTER TABLE `blacklist` DISABLE KEYS */;
-INSERT INTO `blacklist` VALUES ('3','2018-08-05 20:26:15.000000');
+INSERT INTO `blacklist` VALUES ('3','2018-08-05 20:26:15.000000'),('7','2018-08-05 20:09:15.000000');
 /*!40000 ALTER TABLE `blacklist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,7 @@ CREATE TABLE `device` (
 
 LOCK TABLES `device` WRITE;
 /*!40000 ALTER TABLE `device` DISABLE KEYS */;
-INSERT INTO `device` VALUES ('1','1','likhith','ns2002577'),('2','2','pratap','pratap123desai'),('3','3','saurabh','saurabh123shirur'),('4','4','abhi','abhi123'),('5','5','Ajay','ajay123');
+INSERT INTO `device` VALUES ('1','1','likhith','ns2002577'),('2','2','pratap','pratap123desai'),('3','3','saurabh','saurabh123shirur'),('4','4','abhi','abhi123'),('5','5','Ajay','ajay123'),('6','6','abcdef','ns2002588'),('7','7','pqrst','ns2002599');
 /*!40000 ALTER TABLE `device` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,7 +112,7 @@ CREATE TABLE `whitelist` (
 
 LOCK TABLES `whitelist` WRITE;
 /*!40000 ALTER TABLE `whitelist` DISABLE KEYS */;
-INSERT INTO `whitelist` VALUES ('1','2018-08-05 20:00:56.000000'),('2','2018-08-05 20:07:40.000000'),('4','2018-08-05 20:00:56.000000'),('5','2018-08-05 20:08:04.000000');
+INSERT INTO `whitelist` VALUES ('1','2018-08-05 20:00:56.000000'),('2','2018-08-05 20:07:40.000000'),('4','2018-08-05 20:00:56.000000'),('5','2018-08-05 20:08:04.000000'),('6','2018-08-05 20:09:03.000000');
 /*!40000 ALTER TABLE `whitelist` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -125,4 +125,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-05 16:13:47
+-- Dump completed on 2018-08-06 12:37:11
+
