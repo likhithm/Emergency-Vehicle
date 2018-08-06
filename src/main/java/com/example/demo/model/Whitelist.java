@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 @Entity
 public class Whitelist {
     @Id
-    @Column(name = "Device_id")
+    @Column(name = "DeviceID")
     private String D_id;
 
     @Column(name = "Time_Stamp")
