@@ -37,7 +37,7 @@ CREATE TABLE `blacklist` (
 
 LOCK TABLES `blacklist` WRITE;
 /*!40000 ALTER TABLE `blacklist` DISABLE KEYS */;
-INSERT INTO `blacklist` VALUES ('3','2018-08-05 20:26:15.000000'),('7','2018-08-05 20:09:15.000000');
+INSERT INTO `blacklist` VALUES ('3','2018-08-05 20:26:15.000000'),('7','2018-08-05 20:09:15.000000'),('8','2018-08-06 20:13:08.000000');
 /*!40000 ALTER TABLE `blacklist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -65,7 +65,7 @@ CREATE TABLE `device` (
 
 LOCK TABLES `device` WRITE;
 /*!40000 ALTER TABLE `device` DISABLE KEYS */;
-INSERT INTO `device` VALUES ('1','1','likhith','ns2002577'),('2','2','pratap','pratap123desai'),('3','3','saurabh','saurabh123shirur'),('4','4','abhi','abhi123'),('5','5','Ajay','ajay123'),('6','6','abcdef','ns2002588'),('7','7','pqrst','ns2002599');
+INSERT INTO `device` VALUES ('1','1','likhith','ns2002577'),('2','2','pratap','pratap123desai'),('3','3','saurabh','saurabh123shirur'),('4','4','abhi','abhi123'),('5','5','Ajay','ajay123'),('6','6','abcdef','ns2002588'),('7','7','pqrst','ns2002599'),('8','8','pqrlmn','ns2002500');
 /*!40000 ALTER TABLE `device` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,10 +99,11 @@ DROP TABLE IF EXISTS `whitelist`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `whitelist` (
-  `Device_id` varchar(64) NOT NULL,
+  `DeviceID` varchar(64) NOT NULL,
   `Time_Stamp` timestamp(6) NOT NULL,
-  PRIMARY KEY (`Device_id`),
-  UNIQUE KEY `Device_id_UNIQUE` (`Device_id`)
+  PRIMARY KEY (`DeviceID`),
+  UNIQUE KEY `Device_id_UNIQUE` (`DeviceID`),
+  CONSTRAINT `DeviceID` FOREIGN KEY (`DeviceID`) REFERENCES `device` (`device_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -125,5 +126,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-06 12:37:11
+-- Dump completed on 2018-08-06 13:33:28
 
